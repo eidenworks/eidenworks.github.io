@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## Welcome to EidenWorks
 
-You can use the [editor on GitHub](https://github.com/eidenworks/gh-pages/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a project intended to aggregate different sources of information from Cloud Deployments (OpenStack, Kubernetes, Containers, Operating System ...) using tools from the Big Data ecosystem.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Why?
 
-### Markdown
+The origin of this project comes from a prototype done by Red Hat's Strategic Design Team and [KEEDIO] (http://keedio.com) to investigate the different ways to perform log aggregation. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The initial target of the prototype is to aggregate logs from an OpenStack deployment for the OpenStack Operator Persona, howevernt he following data types are considered to be aggregated:
+- Logs
+- Metrics
+- Events 
+- Configuration
 
-```markdown
-Syntax highlighted code block
+To understand the concept you may go throught there blog posts:
+- [Ops Happiness: The Quest for Operations Intelligence](http://rhelblog.redhat.com/2017/02/06/ops-happiness-the-quest-for-operations-intelligence/)
+- [Ops Happiness – Harness Data for Operations Intelligence](http://rhelblog.redhat.com/2017/02/15/ops-happiness-harness-data-for-operations-intelligence/)
+- [Events and Monitoring Supercharging your Operational Intelligence](http://rhelblog.redhat.com/2017/03/30/events-and-monitoring-supercharging-your-operational-intelligence/)
 
-# Header 1
-## Header 2
-### Header 3
+### Status
 
-- Bulleted
-- List
+There is a running prototype set up on a test lab with half the services manually deployed in VMs on OpenStack and the other half on Containers on OpenShift.
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+The toolchain selected is the following
+```
+rsyslog --> nifi --> kafka --> flink --> cassandra --> patternfly
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+All the configuration files used in the prototype are uploaded to the [configfiles](https://github.com/eidenworks/configfiles) repository.
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/eidenworks/gh-pages/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+We are working to have a deployable environment, although,
