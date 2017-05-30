@@ -28,4 +28,5 @@ rsyslog --> nifi --> kafka --> flink --> cassandra --> patternfly
 
 All the configuration files used in the prototype are uploaded to the [configfiles](https://github.com/eidenworks/configfiles) repository.
 
-We are working to have a deployable environment, although,
+There is initial work being done to package all components. You may want to check [COPR repo] (https://copr.fedorainfracloud.org/coprs/mperezco/eidenworks/)
+
