@@ -4,7 +4,7 @@ This is a project intended to aggregate different sources of information from Cl
 
 ### Why?
 
-The origin of this project comes from a prototype done by Red Hat's Strategic Design Team and [KEEDIO] (http://keedio.com) to investigate the different ways to perform log aggregation. 
+The origin of this project comes from a prototype done by Red Hat's Strategic Design Team and [KEEDIO](http://keedio.com) to investigate the different ways to perform log aggregation. 
 
 The initial target of the prototype is to aggregate logs from an OpenStack deployment for the OpenStack Operator Persona, howevernt he following data types are considered to be aggregated:
 - Logs
@@ -25,6 +25,8 @@ The toolchain selected is the following
 ```
 rsyslog --> nifi --> kafka --> flink --> cassandra --> patternfly
 ```
+
+All the content is available in the [main](https://github.com/eidenworks) repository.
 
 All the configuration files used in the prototype are uploaded to the [configfiles](https://github.com/eidenworks/configfiles) repository.
 
